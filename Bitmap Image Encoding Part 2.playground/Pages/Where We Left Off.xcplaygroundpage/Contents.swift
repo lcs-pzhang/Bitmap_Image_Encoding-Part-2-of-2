@@ -54,8 +54,9 @@ for character in encodedBitmap {
  
  Write your ideas in the code comment below.
  */
-// I notice that...
-// I know this because...
+// I notice that the string is always a different number. The number and the order of black and white squares are different each time.
+
+// I know this because of the conditional statement where if the number is 0 it will always start with a black square. If not, it will begin with white squares. The string will always be different because there's no restraints for how long or short it can be.
 /*:
  Now, **remember to commit and push your work**.
  */
