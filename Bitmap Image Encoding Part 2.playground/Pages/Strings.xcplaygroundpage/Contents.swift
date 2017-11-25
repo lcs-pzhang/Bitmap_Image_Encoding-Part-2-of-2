@@ -54,7 +54,7 @@ print(detailedLocation)
  
  What does the \n character represent?
  */
-// It looks like the \n character makes the text start from the center point and not from the left side or the right side
+// It looks like the \n character makes the text start from the center point and not from the left side or the right side. Or could make the dashmark horizontial line
 // (finish this sentence)
 
 /*:
