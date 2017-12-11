@@ -20,17 +20,15 @@ import PlaygroundSupport
 
 // Copy your encoded image string here...
 let encodedBitmap = """
-0,7,1
-1,5,1
-2,3,1
-3,1,1
-3,1,1
-2,3,1
+w4,b4,w13
+w4,b1,y2,w1,b2,w19,b2
+w5,b1,y2,w1,y1,b15,w3,b1
+
 
 """
 
 // Make a canvas
-let canvas = Canvas(width: 402, height: 402)
+let canvas = Canvas(width: 502, height: 502)
 
 // Make a grid
 // NOTE: The code that builds the grid was tucked away in something called a *function* to keep things tidy. We'll learn about functions later.
@@ -55,27 +53,24 @@ var drawThisManyPixels = 0
 for character in encodedBitmap {
     
     // Set colour at start of a line
-    if character == "0" {
+    if character == "w" {
+        
+        canvas.fillColor = Color.white
+        currentColor = "white"
+
+    } else if character == "b" {
         
         canvas.fillColor = Color.black
         currentColor = "black"
-
+        
+    } else if character == "y" {
+        
+        canvas.fillColor = Color.init(hue: 58, saturation: 95, brightness: 95, alpha: 100)
+        currentColor = "yellow"
+        
     } else if character == "," {
         
-        // We have a new number
-        // Are we past the first pixel in a row?
-        if x > 0 {
-
-            // Toggle the pixel colour
-            if currentColor == "black" {
-                currentColor = "white"
-                canvas.fillColor = Color.white
-            } else {
-                currentColor = "black"
-                canvas.fillColor = Color.black
-            }
-
-        }
+        
         
     } else if character == "\n" {
         
@@ -89,6 +84,9 @@ for character in encodedBitmap {
         currentColor = "white"
         
     } else {
+        
+        // What character is being used?
+        print(character)
         
         // Get the new number of pixels to draw
         drawThisManyPixels = Int(String(character))!
