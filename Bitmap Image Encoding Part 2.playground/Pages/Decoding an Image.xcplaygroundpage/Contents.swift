@@ -22,7 +22,20 @@ import PlaygroundSupport
 let encodedBitmap = """
 w4,b4,w13
 w4,b1,y2,w1,b2,w19,b2
-w5,b1,y2,w1,y1,b15,w3,b1
+w5,b1,y2,w1,y1,b15,w3,b1,y1,b1
+w5,b1,y3,w1,y1,r1,y3,b2,w1,b1,y2,b1
+w5,b1,y6,r1,w3,y1,b2,y2,b1
+w4,b2,r1,y5,r1,y2,w2,y3,b1
+w2,b3,r2,y7,o2,w2,y2,b1
+w3,b1,y5,r1,y2,o2,y3,r1,y2,b1
+
+w4,b1,y4,r1,y5,r2,y1,b1
+w5,b1,y2,r1,p1,r1,y2,r2,y3,b1
+w4,b1,y2,r1,p3,r1,y4,r1,y1,b1
+w3,b1,y2,r1,p5,r1,y4,r1,b1
+
+
+
 
 
 """
@@ -67,6 +80,17 @@ for character in encodedBitmap {
         
         canvas.fillColor = Color.init(hue: 58, saturation: 95, brightness: 95, alpha: 100)
         currentColor = "yellow"
+        
+    } else if character == "r" {
+        
+        canvas.fillColor = Color.init(hue: 0, saturation: 80, brightness: 80, alpha: 100)
+    } else if character == "o" {
+        
+        canvas.fillColor = Color.orange
+    
+    } else if character == "p" {
+        
+        canvas.fillColor = Color.init(hue: 28, saturation: 50, brightness: 100, alpha: 100)
         
     } else if character == "," {
         
