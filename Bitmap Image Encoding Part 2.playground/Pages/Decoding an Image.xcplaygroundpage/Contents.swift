@@ -31,10 +31,14 @@ w3,b1,y5,r1,y2,o2,y3,r1,y2,b1
 w4,b1,y3,r1,p1,r1,y4,r2,y2,b1
 w5,b1,y1,r1,p3,r1,y2,r2,y4,b1
 w4,b1,y1,r1,p5,r2,y6,b1
-w3,b1,y1,r1,p1,b2,p2,b3,r2,y4,b1
-w3,b1,y1,r1,p1,w1,b1,p2,b2,w1,b1,w2,y4,b1
-w2,b1,y2,b1,p1,w1,B1,p2,B1,w2,y3,w1,y2,b2
-w3,b2,p2,w1,l1,p2,l1,B1,w1,y5,b1
+w3,b1,y1,r1,b2,p2,b3,r2,y4,b1
+w3,b1,y1,r1,w1,b1,p2,b2,w1,b1,w2,y4,b1
+w2,b1,y2,b1,w1,B1,p2,B1,w2,y3,w1,y2,b2
+w3,b2,p1,w1,l1,p2,l1,B1,w1,y5,b1
+w4,b1,p1,w1,B1,p2,B2,p1,y3,r1,b1
+w4,b1,p8,b2,r1,b1
+
+
 
 
 
@@ -94,7 +98,7 @@ for character in encodedBitmap {
     
     } else if character == "p" {
         
-        canvas.fillColor = Color.init(hue: 28, saturation: 40, brightness: 100, alpha: 100)
+        canvas.fillColor = Color.init(hue: 28, saturation: 30, brightness: 100, alpha: 100)
     } else if character == "B" {
     
     canvas.fillColor = Color.init(hue: 214, saturation: 95, brightness: 95, alpha: 100)
@@ -102,6 +106,8 @@ for character in encodedBitmap {
     } else if character == "l" {
         
         canvas.fillColor = Color.init(hue: 198, saturation: 90, brightness: 95, alpha: 100)
+    } else if character == "g" {
+        canvas.fillColor = Color.init(hue: 0, saturation: 0, brightness: 75, alpha: 100)
         
     } else if character == "," {
         
