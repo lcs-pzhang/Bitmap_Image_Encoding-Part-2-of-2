@@ -37,6 +37,18 @@ w2,b1,y2,b1,w1,B1,p2,B1,w2,y3,w1,y2,b2
 w3,b2,p1,w1,l1,p2,l1,B1,w1,y5,b1
 w4,b1,p1,w1,B1,p2,B2,p1,y3,r1,b1
 w4,b1,p8,b2,r1,b1
+w5,b1,g2,y1,w2,g2,b1
+w5,b1,w2,y1,g2,w2,b1
+w4,b1,y1,b1,w5,b1,y1,b1
+w3,b1,g1,b1,w7,b1,g1,b1
+w3,b1,p1,b1,w7,b1,p1,b1
+w4,b1,G9,b1
+w4,b1,G9,b1
+w5,b1,y3,b1,y3,b1
+w6,b1,G1,b1,w1,b1,G1,b1
+w6,b1,g1,b1,w1,b1,g1,b1
+w7,b1,w3,b1
+
 
 
 
@@ -49,7 +61,7 @@ w4,b1,p8,b2,r1,b1
 """
 
 // Make a canvas
-let canvas = Canvas(width: 502, height: 502)
+let canvas = Canvas(width: 502, height: 802)
 
 // Make a grid
 // NOTE: The code that builds the grid was tucked away in something called a *function* to keep things tidy. We'll learn about functions later.
@@ -108,6 +120,8 @@ for character in encodedBitmap {
         canvas.fillColor = Color.init(hue: 198, saturation: 90, brightness: 95, alpha: 100)
     } else if character == "g" {
         canvas.fillColor = Color.init(hue: 0, saturation: 0, brightness: 75, alpha: 100)
+    } else if character == "G" {
+        canvas.fillColor = Color.init(hue: 0, saturation: 0, brightness: 45, alpha: 100)
         
     } else if character == "," {
         
